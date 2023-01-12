@@ -1,0 +1,7 @@
+FE pages -- should be same as current autobuild:
+    Forgot
+    Recover
+    Sign Up
+    Sign In
+    Dashboard Sign Out
+    Settings

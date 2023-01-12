@@ -1,0 +1,29 @@
+CRUD user_account
+        sign in
+            manual
+            auto
+        sign up
+        delete account
+        update account
+            settings
+    CRUD user_pass
+        should all be handled through user_account
+    CRUD user_forgot
+        update account
+            settings
+            recovery
+        forgot
+    CRUD user_push
+        should implement a push note call to an api
+    Images Hosted
+        Local
+        url-local
+        url-global
+
+Database For langs:
+    go -> sql
+    node -> mongodb
+    php -> mysql
+    python -> sqllite
+    rust -> postgresql
+
