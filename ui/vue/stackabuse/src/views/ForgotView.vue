@@ -8,7 +8,7 @@
       },
       // actions
       methods: {
-        debug (a) {
+        debug (a:any) {
           console.log(a)
         }
       }

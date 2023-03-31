@@ -11,7 +11,7 @@
       },
       // actions
       methods: {
-        debug (a,b,c,d) {
+        debug (a:any,b:any,c:any,d:any) {
           console.log(a)
           console.log(b)
           console.log(c)

@@ -1,0 +1,116 @@
+networks:
+  ampps-net:
+    external: true
+
+services:
+  ruby-docker:
+    build:
+      context: ./../../ui/rubyonrails/first-rail
+      dockerfile: dockerfile
+    image: "ruby-docker"
+    ports:
+      - "9994:3000"
+    networks:
+      - "ampps-net"
+  vue-docker:
+    build:
+      context: ./../../ui/vue/stackabuse
+      dockerfile: dockerfile
+    image: "vue-docker"
+    ports:
+      - "5173:80"
+    networks:
+      - "ampps-net"
+  angular-docker:
+    build:
+      context: ./../../ui/angular/first-project
+      dockerfile: dockerfile
+    image: "angular-docker"
+    ports:
+      - "4200:80"
+    networks:
+      - "ampps-net"
+  react-docker:
+    build:
+      context: ./../../ui/react/docker-test
+      dockerfile: dockerfile
+    image: "react-docker"
+    ports:
+      - "3000:3000"
+    networks:
+      - "ampps-net"
+    volumes:
+        - app-volume:/build
+  react-native-docker:
+    build:
+      context: ./../../ui/reactnative/docker-project
+      dockerfile: dockerfile
+    image: "react-native-docker"
+    ports:
+      - "8081:8081"
+    networks:
+      - "ampps-net"
+  # docker run --rm --net ampps-net -p 80:80 api-php-docker
+  api-php-docker:
+    build: .
+    image: "api-php-docker"
+    ports:
+      - "80:80"
+    networks:
+      - "ampps-net"
+    volumes:
+        - app-volume:/var/www/build
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    networks:
+      - "ampps-net"
+  mongo-seed:
+    build: ./../../db/mongodb/
+    depends_on:
+      - mongodb_container
+    networks:
+      - "ampps-net"
+  python-docker:
+    image: "python-docker"
+    ports:
+      - "9999:9999"
+    networks:
+      - "ampps-net"
+  go-docker:
+    image: "go-docker"
+    ports:
+      - "9998:8081"
+    networks:
+      - "ampps-net"
+  express-docker:
+    image: "express-docker"
+    ports:
+      - "9997:9997"
+    networks:
+      - "ampps-net"
+  rust-docker:
+    image: "rust-docker"
+    ports:
+      - "7878:7878"
+    networks:
+      - "ampps-net"
+  # docker run --rm --net ampps-net -p 3306:3306 --name skillermysql skillermysql
+  skillermysql:
+    build:
+      context: ./../../db/
+      dockerfile: dockerfile
+    image: "skillermysql"
+    ports:
+      - "3306:3306"
+    networks:
+      - "ampps-net"
+volumes:
+     app-volume:
+     mongodb_data_container:

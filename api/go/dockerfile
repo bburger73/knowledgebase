@@ -1,0 +1,7 @@
+FROM golang:1.10
+
+COPY . .
+EXPOSE 8081
+
+# Run the executable
+CMD ["go","run","main.go"]

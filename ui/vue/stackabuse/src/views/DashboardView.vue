@@ -31,6 +31,6 @@
 </template>
   
 <style>
-    @import './assets/styles/components.css';
+    @import './../assets/styles/components.css';
 </style>
   

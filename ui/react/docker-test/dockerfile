@@ -1,0 +1,30 @@
+FROM node:16
+
+# WORKDIR /app
+COPY . .
+
+
+RUN npm install
+RUN npm run build
+# RUN npm run start
+RUN chown -R www-data:www-data /build
+ENV BROWSER=none
+
+
+# # Copy application source
+
+
+
+# FROM php:7.4-apache
+# RUN docker-php-ext-install mysqli
+# COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+# COPY start-apache /usr/local/bin
+# RUN a2enmod rewrite
+# COPY ./index.html /var/www/
+# RUN chown -R www-data:www-data /var/www
+
+# WORKDIR /
+# COPY start-apache /
+CMD ["npm","run","start"]
+# CMD ["/bin/sh","/start-apache",";","npm","run","start"]
+# EXPOSE 3000

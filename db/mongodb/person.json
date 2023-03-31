@@ -1,0 +1,20 @@
+[{
+  "_id": 0,
+  "age": 27,
+  "email": "bburger73@gmail.com",
+  "mother": 2,
+  "father": 3
+},{
+  "_id": 2,
+  "age": 60,
+  "email": "cins4@msn.com",
+  "mother": -1,
+  "father": -1
+},{
+  "_id": 3,
+  "name": "Bill Burger",
+  "age": 50,
+  "email": "bburger@idot.gov",
+  "mother": 0,
+  "father": 0
+}]

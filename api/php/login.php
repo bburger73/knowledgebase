@@ -1,6 +1,6 @@
 <?php
-    $hn = 'localhost';
-    $db = 'baseapp'; // remw123_baseapi
+    $hn = 'skillermysql';
+    $db = 'skiller'; // remw123_baseapi
     $un = 'root'; // remw123_baseapi
     $pw = 'mysql'; // Txn$E{rs5q,4
 

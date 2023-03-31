@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "docker-project",
+    "slug": "docker-project",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "docker-project"
+}

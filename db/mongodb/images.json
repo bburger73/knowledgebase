@@ -1,0 +1,9 @@
+[{
+  "_id": 0,
+  "path": "/path/to/image.png",
+  "user": 0,
+  "userloc": {
+    "x": 50,
+    "y": 60
+  }
+}]

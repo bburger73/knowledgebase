@@ -1,0 +1,5 @@
+FROM mongo
+
+COPY . .
+RUN mongoimport --host mongodb_container --db burgerreunion --collection images --type json --file ./images.json --jsonArray
+CMD mongoimport --host mongodb_container --db burgerreunion --collection person --type json --file ./person.json --jsonArray
