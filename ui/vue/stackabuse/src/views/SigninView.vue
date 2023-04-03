@@ -23,7 +23,7 @@
               }),
             };
         
-          fetch("https://baseapi.burgertechnologies.com/user_account/read.php",requestOptions).then(res => res.json()).then(result => {
+          fetch("http://localhost/LearningLab/api/php/user_account/read.php",requestOptions).then(res => res.json()).then(result => {
               console.log(result);
               if(result.response == "success")
               {

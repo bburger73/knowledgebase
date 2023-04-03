@@ -1,0 +1,55 @@
+<style>
+</style>
+<div class="card">
+    <div class="card-body signin-card">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img alt="Logo" src="./../assets/BurgerTechnologies-logo-white.png" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h1>Sign In</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="form-floating">
+                        <input id="email" class="form-control" placeholder="JohnDoe@example.com" />
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="form-floating">
+                        <input id="pass" class="form-control" placeholder="************" />
+                        <label for="pass">Password</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <button class="btn btn-primary" (click)="signin()">Sign In</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" routerLink="/signup-component" routerLinkActive="active" ariaCurrentWhenActive="page">Sign Up</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" routerLink="/forgot-component" routerLinkActive="active" ariaCurrentWhenActive="page">Forgot</button>
+            </div>
+        </div>
+    </div>
+</div>

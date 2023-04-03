@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from './api.service';
+import { faRightFromBracket,faArrowLeft,faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,11 @@ import {ApiService} from './api.service';
 
 export class AppComponent {
   countryData = Object();
-  constructor(private api:ApiService) {}
+
+  faXmark = faXmark;
+  constructor(private api:ApiService) {
+    
+  }
   
   ngpresser() {       
     this.api.presser().subscribe((data)=>{       

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+.row{
+    width: 100%;
+    margin:10px auto;
+}
+
+
+.card{
+    --bs-card-border-color:nones !important;
+    background-color: green !important;
+    width:auto;
+    border:none;
+}
+
+.card h1{
+    width:100%;
+}
+
+.card button{
+    width:100%;
+}
+
+
+
+.signin-card{
+    width:65%;
+    margin:0 auto;
+    text-align: center;
+}
+
+h1{
+    color:white !important;
+}
+
+.header-navs{
+    justify-content: space-between;
+    width: 100%;
+}
+.header-navs a{
+    width:auto !important;
+    font-size: 30px;
+    margin: 0px 10px;
+}

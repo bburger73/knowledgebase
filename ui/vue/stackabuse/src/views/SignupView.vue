@@ -7,6 +7,7 @@
           emailver:"",
           password:"",
           passwordver:"",
+          name:""
         }
       },
       // actions
@@ -16,6 +17,25 @@
           console.log(b)
           console.log(c)
           console.log(d)
+        },
+        signup (email:string,pass:string,name:string){
+          const requestOptions = {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                email:email,
+                pass:pass,
+                name:name
+              }),
+            };
+        
+          fetch("http://localhost/LearningLab/api/php/user_account/create.php",requestOptions).then(res => res.json()).then(result => {
+              console.log(result);
+              if(result.response == "success")
+              {
+                this.$router.push({name: 'dashboard', params:result,})
+              }
+          });
         }
       }
     }
@@ -28,9 +48,13 @@
       </td><td>
       <input id="email" v-model="email" placeholder="john.doe@example.com" />
     </td></tr><tr><td>
-      <label for="email">Email Verification</label>
+      <label for="emailver">Email Verification</label>
       </td><td>
-      <input id="email" v-model="emailver" placeholder="john.doe@example.com" />
+      <input id="emailver" v-model="emailver" placeholder="john.doe@example.com" />
+    </td></tr><tr><td>
+      <label for="name">Email Verification</label>
+      </td><td>
+      <input id="name" v-model="name" placeholder="John Doe" />
     </td></tr><tr><td>
       <label for="password">Password</label>
       </td><td>
@@ -40,7 +64,7 @@
       </td><td>
       <input id="passwordver" v-model="passwordver" placeholder="*********" />
     </td></tr><tr><td><button>Forgot?</button></td><td>
-      <button @click="debug(email,emailver,password,passwordver)">Sign Up</button>
+      <button @click="signup(email,password,name)">Sign Up</button>
       </td></tr></tbody><tfoot></tfoot></table>
     </div>
   </template>

@@ -1,24 +1,17 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
-	"html"
-	"log"
-	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-
-	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-	})
-
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
-	})
-
-	http.Handle("/", http.FileServer(http.Dir("./")))
-
-	log.Fatal(http.ListenAndServe(":8081", nil))
-
+	db, err := sql.Open("mysql", "root:mysql@tcp(127.0.0.1:3306)")
+	if err != nil {
+		panic(err.Error())
+	}
+	defer db.Close()
+	fmt.Println("Success!")
 }
