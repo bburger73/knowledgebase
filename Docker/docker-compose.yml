@@ -5,7 +5,7 @@ networks:
 services:
   ruby-docker:
     build:
-      context: ./../../ui/rubyonrails/first-rail
+      context: ./../ui/rubyonrails/first-rail
       dockerfile: dockerfile
     image: "ruby-docker"
     ports:
@@ -14,7 +14,7 @@ services:
       - "ampps-net"
   vue-docker:
     build:
-      context: ./../../ui/vue/stackabuse
+      context: ./../ui/vue/stackabuse
       dockerfile: dockerfile
     image: "vue-docker"
     ports:
@@ -23,7 +23,7 @@ services:
       - "ampps-net"
   angular-docker:
     build:
-      context: ./../../ui/angular/first-project
+      context: ./../ui/angular/first-project
       dockerfile: dockerfile
     image: "angular-docker"
     ports:
@@ -32,7 +32,7 @@ services:
       - "ampps-net"
   react-docker:
     build:
-      context: ./../../ui/react/docker-test
+      context: ./../ui/react/docker-test
       dockerfile: dockerfile
     image: "react-docker"
     ports:
@@ -43,16 +43,18 @@ services:
         - app-volume:/build
   react-native-docker:
     build:
-      context: ./../../ui/reactnative/docker-project
+      context: ./../ui/reactnative/docker-project
       dockerfile: dockerfile
     image: "react-native-docker"
     ports:
-      - "8081:8081"
+      - "19000:19000"
     networks:
       - "ampps-net"
   # docker run --rm --net ampps-net -p 80:80 api-php-docker
   api-php-docker:
-    build: .
+    build:
+      context: ./../api/php
+      dockerfile: dockerfile
     image: "api-php-docker"
     ports:
       - "80:80"
@@ -60,23 +62,23 @@ services:
       - "ampps-net"
     volumes:
         - app-volume:/var/www/build
-  mongodb_container:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: rootpassword
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb_data_container:/data/db
-    networks:
-      - "ampps-net"
-  mongo-seed:
-    build: ./../../db/mongodb/
-    depends_on:
-      - mongodb_container
-    networks:
-      - "ampps-net"
+  # mongodb_container:
+  #   image: mongo:latest
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: rootpassword
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - mongodb_data_container:/data/db
+  #   networks:
+  #     - "ampps-net"
+  # mongo-seed:
+  #   build: ./../../db/mongodb/
+  #   depends_on:
+  #     - mongodb_container
+  #   networks:
+  #     - "ampps-net"
   python-docker:
     image: "python-docker"
     ports:
@@ -104,7 +106,7 @@ services:
   # docker run --rm --net ampps-net -p 3306:3306 --name skillermysql skillermysql
   skillermysql:
     build:
-      context: ./../../db/
+      context: ./../db/
       dockerfile: dockerfile
     image: "skillermysql"
     ports:

@@ -13,7 +13,7 @@ function signup() {
         }),
     };
 
-    fetch("http://localhost/LearningLab/api/php/user_account/create.php", requestOptions).then(res => res.json()).then(result => {
+    fetch("http://localhost/user_account/create.php", requestOptions).then(res => res.json()).then(result => {
         console.log(result);
         if (result.response == "success") {
             window.location.href='signin';
@@ -31,7 +31,7 @@ function signin (email,pass){
         }),
       };
   
-    fetch("http://localhost/LearningLab/api/php/user_account/read.php",requestOptions).then(res => res.json()).then(result => {
+    fetch("http://localhost/user_account/read.php",requestOptions).then(res => res.json()).then(result => {
         console.log(result);
         if(result.response == "success")
         {
@@ -49,7 +49,7 @@ function forgot(email) {
         }),
     };
 
-    fetch("http://localhost/LearningLab/api/php/user_forgot/create.php", requestOptions).then(res => res.json()).then(result => {
+    fetch("http://localhost/user_forgot/create.php", requestOptions).then(res => res.json()).then(result => {
         console.log(result);
         if (result.response == "success") {
             window.location.href='signin';

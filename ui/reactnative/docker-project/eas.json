@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "version": ">= 0.56.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./burgertechnologies-native-af7a6c483992.json",
+        "track": "internal"
+      },
+      "ios": {
+        "appleId": "bburger@burgertechnologies.com",
+        "ascAppId": "1638728222",
+        "appleTeamId": "DJ46SA9LW5"
+      }
+    }
+  }
+}

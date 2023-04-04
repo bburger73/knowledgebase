@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1007761260748",
+    "project_id": "burgertechnologiesnative",
+    "storage_bucket": "burgertechnologiesnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007761260748:android:632c632883235156c60269",
+        "android_client_info": {
+          "package_name": "com.burgertechnologies.nativeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007761260748-ni8as6op2vt24ff4lron8jvci3l6nnr4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3zvCqy9jxode3yw8JI09N4uVNOkC6yes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007761260748-ni8as6op2vt24ff4lron8jvci3l6nnr4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
