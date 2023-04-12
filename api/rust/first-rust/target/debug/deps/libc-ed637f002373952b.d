@@ -1,0 +1,11 @@
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\libc-ed637f002373952b.rmeta: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\macros.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\fixed_width_ints.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\mod.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\msvc\mod.rs
+
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\liblibc-ed637f002373952b.rlib: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\macros.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\fixed_width_ints.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\mod.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\msvc\mod.rs
+
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\libc-ed637f002373952b.d: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\macros.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\fixed_width_ints.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\mod.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\msvc\mod.rs
+
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\lib.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\macros.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\fixed_width_ints.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\mod.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.141\src\windows\msvc\mod.rs:

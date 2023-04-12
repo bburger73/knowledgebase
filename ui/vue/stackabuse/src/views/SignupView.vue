@@ -29,7 +29,7 @@
               }),
             };
         
-          fetch("http://localhost/LearningLab/api/php/user_account/create.php",requestOptions).then(res => res.json()).then(result => {
+          fetch("http://localhost/user_account/create.php",requestOptions).then(res => res.json()).then(result => {
               console.log(result);
               if(result.response == "success")
               {

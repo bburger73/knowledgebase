@@ -1,4 +1,4 @@
-global.server = "https://baseapi.burgertechnologies.com/";
+global.server = "http://192.168.0.88/";
 global.styles = {
     main:"#000000",
     accent:"#6D6D6D",

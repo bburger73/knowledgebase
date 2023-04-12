@@ -1,0 +1,12 @@
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\ahash-259f576d28a85e31.rmeta: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src/lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\convert.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\fallback_hash.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\operations.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\random_state.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\specialize.rs
+
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\libahash-259f576d28a85e31.rlib: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src/lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\convert.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\fallback_hash.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\operations.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\random_state.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\specialize.rs
+
+C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\deps\ahash-259f576d28a85e31.d: C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src/lib.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\convert.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\fallback_hash.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\operations.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\random_state.rs C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\specialize.rs
+
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src/lib.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\convert.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\fallback_hash.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\operations.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\random_state.rs:
+C:\Users\bburg\.cargo\registry\src\github.com-1ecc6299db9ec823\ahash-0.7.6\src\specialize.rs:

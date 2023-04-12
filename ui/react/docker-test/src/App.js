@@ -1,5 +1,12 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
 
@@ -43,6 +50,19 @@ function App() {
         <button onClick={() => presser()}>Click Me</button>
         <button onClick={() => pressertwo()}>Click Me</button>
       </header>
+      <>
+        <Link to="/">Sign In</Link>
+        <Link to="/signup">Sign Up</Link>
+        <Link to="/forgot">Forgot</Link>
+        <Routes>
+          <Route path="/" element={<Signin/>} />
+          <Route path="/signin" element={<Signin/>} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/forgot" element={<Forgot/>} />
+          <Route path="/dashboard" element={<DashboardUser/>} />
+          <Route path="/settings" element={<Settings/>} />
+        </Routes>    
+      </>
     </div>
   );
 }

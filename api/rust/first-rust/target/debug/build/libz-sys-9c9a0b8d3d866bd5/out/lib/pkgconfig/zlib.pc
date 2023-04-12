@@ -1,0 +1,13 @@
+prefix=C:\Program Files\Ampps\www\LearningLab\api\rust\first-rust\target\debug\build\libz-sys-9c9a0b8d3d866bd5\out
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+sharedlibdir=@sharedlibdir@
+includedir=@includedir@
+
+Name: zlib
+Description: zlib compression library
+Version: @VERSION@
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
