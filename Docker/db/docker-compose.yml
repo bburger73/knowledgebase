@@ -1,0 +1,33 @@
+networks:
+  ampps-net:
+    external: true
+services:
+  skillermysql:
+    build:
+      context: ./../../db/
+      dockerfile: dockerfile
+    image: "skillermysql"
+    ports:
+      - "3306:3306"
+    networks:
+      - "ampps-net"
+  # mongodb_container:
+  #   image: mongo:latest
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: rootpassword
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - mongodb_data_container:/data/db
+  #   networks:
+  #     - "ampps-net"
+  # mongo-seed:
+  #   build: ./../../db/mongodb/
+  #   depends_on:
+  #     - mongodb_container
+  #   networks:
+  #     - "ampps-net"
+volumes:
+     app-volume:
+     mongodb_data_container:

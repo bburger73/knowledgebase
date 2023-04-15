@@ -4,6 +4,7 @@ import {
     Navigate
 } from "react-router-dom";
 import './global.js';
+import ApiPicker from './api-picker.js';
 
 class Signin extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class Signin extends React.Component {
             }),
         };
 
-        fetch(global.server + "user_account/read.php",requestOptions).then(res => res.json()).then(hold => {
+        fetch(global.server + "user_account/read",requestOptions).then(res => res.json()).then(hold => {
             this.props.setLoading(false);
             let auth = hold['auth'];//0
             let user = hold['id'];//1

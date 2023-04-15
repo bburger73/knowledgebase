@@ -1,0 +1,54 @@
+networks:
+  ampps-net:
+    external: true
+services:
+  ruby-docker:
+    build:
+      context: ./../../ui/rubyonrails/first-rail
+      dockerfile: dockerfile
+    image: "ruby-docker"
+    ports:
+      - "9994:3000"
+    networks:
+      - "ampps-net"
+  vue-docker:
+    build:
+      context: ./../../ui/vue/stackabuse
+      dockerfile: dockerfile
+    image: "vue-docker"
+    ports:
+      - "5173:80"
+    networks:
+      - "ampps-net"
+  angular-docker:
+    build:
+      context: ./../../ui/angular/first-project
+      dockerfile: dockerfile
+    image: "angular-docker"
+    ports:
+      - "4200:80"
+    networks:
+      - "ampps-net"
+  react-docker:
+    build:
+      context: ./../../ui/react/docker-test
+      dockerfile: dockerfile
+    image: "react-docker"
+    ports:
+      - "3000:3000"
+    networks:
+      - "ampps-net"
+    volumes:
+        - app-volume:/build
+  react-native-docker:
+    build:
+      context: ./../../ui/reactnative/docker-project
+      dockerfile: dockerfile
+    image: "react-native-docker"
+    ports:
+      - "19000:19000"
+    networks:
+      - "ampps-net"
+volumes:
+     app-volume:
+     mongodb_data_container:

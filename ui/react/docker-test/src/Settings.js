@@ -39,7 +39,7 @@ class Settings extends React.Component {
             }),
         };
         
-        fetch(global.server + 'user_account/update.php',requestOptions).then(res => res.json()).then(result => {
+        fetch(global.server + 'user_account/update',requestOptions).then(res => res.json()).then(result => {
             if(result.result)
             {
                 alert('Successfully Updated Your Account!');

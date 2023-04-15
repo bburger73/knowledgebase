@@ -1,0 +1,53 @@
+networks:
+  ampps-net:
+    external: true
+
+services:
+  api-php-docker:
+    build:
+      context: ./../../api/php
+      dockerfile: dockerfile
+    image: "api-php-docker"
+    ports:
+      - "9999:80"
+    networks:
+      - "ampps-net"
+    volumes:
+        - app-volume:/var/www/build
+  python-docker:
+    image: "python-docker"
+    ports:
+      - "9998:9999"
+    networks:
+      - "ampps-net"
+    depends_on:
+      - skillermysql
+  go-docker:
+    image: "go-docker"
+    ports:
+      - "9997:8081"
+    networks:
+      - "ampps-net"
+  express-docker:
+    image: "express-docker"
+    ports:
+      - "9996:9997"
+    networks:
+      - "ampps-net"
+  rust-docker:
+    image: "rust-docker"
+    ports:
+      - "9995:7878"
+    networks:
+      - "ampps-net"
+  skillermysql:
+    build:
+      context: ./../../db/
+      dockerfile: dockerfile
+    image: "skillermysql"
+    ports:
+      - "3306:3306"
+    networks:
+      - "ampps-net"
+volumes:
+     app-volume:

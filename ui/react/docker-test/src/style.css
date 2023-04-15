@@ -848,3 +848,21 @@ nav{
     color:white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+
+.api-picker{
+    display:block;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background-color: rgba(124, 0, 0, 0.555);
+    border-radius: 5px;
+  }
+  .api-picker ul{
+    list-style: none;
+    width: 130px;
+    padding:10px;
+  }
+  .api-picker li input{
+      width:auto !important;
+  }

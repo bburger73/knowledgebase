@@ -7,6 +7,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import ApiPicker from './api-picker';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
             }),
           };
       
-        fetch("http://localhost/user_account/create.php",requestOptions).then(res => {
+        fetch(global.server + "user_account/create",requestOptions).then(res => {
             alert(res);
         });
   }
@@ -35,7 +36,7 @@ function App() {
             }),
           };
       
-        fetch("http://localhost/user_account/read.php",requestOptions).then(res => {
+        fetch(global.server + "user_account/read",requestOptions).then(res => {
             alert(res);
         });
   }
@@ -49,6 +50,7 @@ function App() {
         </p>
         <button onClick={() => presser()}>Click Me</button>
         <button onClick={() => pressertwo()}>Click Me</button>
+        <ApiPicker></ApiPicker>
       </header>
       <>
         <Link to="/">Sign In</Link>

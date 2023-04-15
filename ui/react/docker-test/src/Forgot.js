@@ -14,7 +14,7 @@ class Forgot extends React.Component {
                 email:email
             }),
         };
-        fetch(global.server + 'user_forgot/create.php',requestOptions).then(response => {
+        fetch(global.server + 'user_forgot/create',requestOptions).then(response => {
             alert('Email has been sent! ' + JSON.stringify(response));
         });
     }

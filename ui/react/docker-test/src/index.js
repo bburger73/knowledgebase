@@ -19,6 +19,7 @@ import Forgot from './Forgot';
 
 import './style.css';
 import './global.js';
+import ApiPicker from './api-picker';
 
 
 class Carrosell extends React.Component {
@@ -35,6 +36,7 @@ class Carrosell extends React.Component {
         this.clearQuiz = this.clearQuiz.bind(this);
         this.updatePrize = this.updatePrize.bind(this);
         this.saveState = this.saveState.bind(this);
+        this.setRedirectToSignin = this.setRedirectToSignin.bind(this);
 
         this.state = {
             user: {
@@ -50,10 +52,11 @@ class Carrosell extends React.Component {
                 email: 0,
                 phone: 0,
                 quiz: 0,
-                theirId: 0,
+                theirId: 0
             },
             navToggle:false,
             isLoading:false,
+            redirectToSignin:false,
         }
 
         if (window.performance) {
@@ -196,7 +199,7 @@ class Carrosell extends React.Component {
     }
 
     updatePoints = () => {
-        fetch(global.server + "getUserPoints.php?UserId=" + this.state.user.userId).then(res => res.json()).then(result => {
+        fetch(global.server + "getUserPoints?UserId=" + this.state.user.userId).then(res => res.json()).then(result => {
             let updatedUser = this.state.user;
             updatedUser.points = result;
             this.setState({
@@ -224,6 +227,12 @@ class Carrosell extends React.Component {
         newUser.quiz = 0;
         this.setState({
             user: newUser,
+        })
+    }
+
+    setRedirectToSignin = () => {
+        this.setState({
+            redirectToSignin:true
         })
     }
 
@@ -289,7 +298,7 @@ class Carrosell extends React.Component {
                 </div>
                 <ul id="navList">
                   <li style={{padding:"0px",margin:"0px"}}>
-                      <a  href="http://localhost:3000" className="navImageA" >
+                      <a href="http://localhost:3000" className="navImageA" >
                           <img id='navImage' src='./logo192-blue.png' alt='headerImg' />
                       </a>
                   </li>
@@ -320,7 +329,7 @@ class Carrosell extends React.Component {
                 </Route>
                 <Route path="/signin" element={<Signin setLoading={this.setLoading} signout={this.signout} signin={this.signin}/>}>
                 </Route>
-                <Route path="/signup" element={<Signup setLoading={this.setLoading} />}>
+                <Route path="/signup" element={<Signup setLoading={this.setLoading}  setRedirectToSignin={this.setRedirectToSignin } redirectToSignin={this.state.redirectToSignin}/>}>
                 </Route>
                 <Route path="/settings" element={<Settings user={this.state.user} setAccountData={this.setAccountData} />}>
                 </Route>
@@ -332,6 +341,7 @@ class Carrosell extends React.Component {
             }
             </div>
           </Router>
+        <ApiPicker></ApiPicker>
         </div>
         );
     }
