@@ -5,7 +5,7 @@ const port = 9997
 var mysql = require('mysql')
 
 var connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'skillermysql',
   user: 'root',
   password: 'mysql',
   database: 'skiller'
